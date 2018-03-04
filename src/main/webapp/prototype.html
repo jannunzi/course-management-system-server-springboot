@@ -1,0 +1,186 @@
+<html>
+<head>
+<link
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	rel="stylesheet" />
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous" type="text/javascript"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+	integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+	crossorigin="anonymous" type="text/javascript"></script>
+
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+	integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	crossorigin="anonymous" type="text/javascript"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+	integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	crossorigin="anonymous" type="text/javascript"></script>
+<script defer
+	src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
+	type="text/javascript"></script>
+<script type="text/javascript">
+	$(init);
+	function init() {
+		$('.jga-sortable-vertical').sortable({
+			axis : 'y'
+		});
+		$('.jga-sortable-horizontal').sortable({
+			axis : 'x'
+		});
+		$('.jga-sortable').sortable();
+	}
+</script>
+<style type="text/css">
+	.nav-item {
+		margin-right: 5px;
+	}
+	.nav-tabs .nav-link.active {
+		color: #fff;
+		background-color: #007bff;
+	}
+	.nav-pills .jga.nav-link,
+	.nav-tabs .jga.nav-link {
+		background-color: #eee;
+	}
+	.jga-border-left-right-none {
+		border-left: none;
+		border-right: none;
+	}
+	.jga-border-bottom-none {
+		border-bottom: none;
+	}
+	.jga-text-align-center {
+		text-align: center;
+	}
+	.jga-font-size-1-point-5em {
+		font-size: 1.5em;
+	}
+	.jga-position-relative-top-5px {
+	    position: relative;
+		top: 5px;
+    }
+	.jga-padding-top-bottom-0px {
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+	.jga-pull-bottom-right {
+		position: fixed;
+		bottom: 15px;
+		right: 15px;
+	}
+	.jga-padding-12px {
+		padding: 12px;
+	}
+	.jga-color-red {
+		color: red;
+	}
+	
+	.nav-link .form-control.form-control-sm {
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+</style>
+</head>
+<body>
+	<br />
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-3">
+				<ul class="list-group jga-sortable-vertical">
+					<li class="list-group-item">
+						Module 1
+					</li>
+					<li class="list-group-item">
+						Module 2
+					</li>
+					<li class="active list-group-item">
+						Module 3
+						<i class="float-right jga-font-size-1-point-5em fa fa-times"></i>
+					</li>
+					<li class="list-group-item">
+						Module 4
+					</li>
+					<li class="list-group-item jga-text-align-center jga-border-left-right-none jga-border-bottom-none">
+						<i class="jga-color-red fa fa-2x fa-plus-circle"></i>
+					</li>
+				</ul>
+
+			</div>
+			<div class="col-md-9">
+				<ul class="nav nav-tabs">
+					<li class="nav-item">
+						<a class="nav-link active" href="#">
+							Section 1
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="jga nav-link" href="#">
+							Section 2
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="jga nav-link" href="#" contenteditable="true">
+							Section 3
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="jga nav-link">
+							Editing Section
+							<!-- <input class="form-control form-control-sm" value="Section 4" /> -->
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<i class="jga-color-red jga-font-size-1-point-5em fa fa-plus-circle"></i>
+						</a>
+					</li>
+				</ul>
+
+				<br />
+
+				<ul class="nav nav-pills jga-sortable">
+					<li class="nav-item" title="Active pills can be removed and label can be edited">
+						<a class="nav-link active" href="#">
+							Active Pill
+							&nbsp;
+							<i class="fa fa-times"></i>
+						</a>
+					</li>
+					<li class="nav-item" title="All pills cane be sorted">
+						<a class="jga nav-link" href="#">
+							Normal Pill
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="jga nav-link" href="#">
+							Normal Pill
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<i class="jga-color-red jga-font-size-1-point-5em fa fa-plus-circle"></i>
+						</a>
+					</li>
+					
+					
+				</ul>
+
+				<div class="dropup">
+					<i data-toggle="dropdown"
+						class="dropdown-toggle jga-color-red jga-pull-bottom-right fa fa-3x fa-plus-circle"></i>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+						<button class="dropdown-item" type="button">Action</button>
+						<button class="dropdown-item" type="button">Another
+							action</button>
+						<button class="dropdown-item" type="button">Something
+							else here</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
